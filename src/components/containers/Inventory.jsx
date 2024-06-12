@@ -1,5 +1,5 @@
-import "../../styles/Inventory.module.scss";
+import styles from "../../styles/Inventory.module.scss";
 
 export default function Inventory() {
-  return <div className="inventory">inventory</div>;
+  return <div className={styles.inventory}>inventory</div>;
 }
