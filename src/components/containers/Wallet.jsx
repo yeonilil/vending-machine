@@ -1,20 +1,42 @@
-import { useState } from "react";
 import "../../styles/Wallet.Module.scss";
+import useStore from "../../store/coin";
 
 export default function Wallet() {
-  const [coin, setCoin] = useState(20000);
+  const { machineCoin, walletCoin, insertCoin } = useStore((state) => state);
+
   return (
     <div className="machine">
       <p className="walletTitle">My Wallet</p>
       <div className="coinEnter">
-        <p>\ {coin}</p>
+        <p>\ {walletCoin}</p>
       </div>
       <div className="coinContainer">
-        <div className="coin">50</div>
-        <div className="coin">100</div>
-        <div className="coin">500</div>
-        <div className="coin">1,000</div>
+        <div
+          className={`coin ${walletCoin >= 50 ? "" : "disabled"}`}
+          onClick={() => walletCoin >= 50 && insertCoin(50)}
+        >
+          50
+        </div>
+        <div
+          className={`coin ${walletCoin >= 100 ? "" : "disabled"}`}
+          onClick={() => walletCoin >= 100 && insertCoin(100)}
+        >
+          100
+        </div>
+        <div
+          className={`coin ${walletCoin >= 500 ? "" : "disabled"}`}
+          onClick={() => walletCoin >= 500 && insertCoin(500)}
+        >
+          500
+        </div>
+        <div
+          className={`coin ${walletCoin >= 1000 ? "" : "disabled"}`}
+          onClick={() => walletCoin >= 1000 && insertCoin(1000)}
+        >
+          1,000
+        </div>
       </div>
     </div>
   );
 }
+//클래스에 맞게 값 지정

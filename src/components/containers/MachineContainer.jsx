@@ -1,5 +1,12 @@
 import "../../styles/MachineContainer.module.scss";
+import useStore from "../../store/coin";
 
 export default function MachineContainer() {
-  return <div className="machineContainer">machinecontainer</div>;
+  const { machineCoin } = useStore();
+  return (
+    <div className="machineContainer">
+      machinecontainer
+      <p>자판기 \ {machineCoin}</p>
+    </div>
+  );
 }
