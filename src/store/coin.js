@@ -9,4 +9,5 @@ const useStore = create((set) => ({
       walletCoin: state.walletCoin - value,
     })),
 }));
+
 export default useStore;
