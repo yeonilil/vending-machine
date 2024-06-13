@@ -90,13 +90,12 @@
   padding-right: 10px;
   margin-left: 250px;
 }
-.selectButton {
+.changeButton {
   width: 35px;
-  height: 35px;
+  height: 50px;
   background-color: #ffeb5a;
-  border: 4px solid #ffa500;
-  border-radius: 100px;
-  margin-left: 330px;
+  border: 2px solid #ffa500;
+  margin-left: 320px;
   margin-top: 20px;
   &:hover {
     background-color: #ffb400;

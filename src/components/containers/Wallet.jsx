@@ -2,7 +2,7 @@ import "../../styles/Wallet.Module.scss";
 import useStore from "../../store/coin";
 
 export default function Wallet() {
-  const { machineCoin, walletCoin, insertCoin } = useStore((state) => state);
+  const { walletCoin, insertCoin } = useStore((state) => state);
 
   return (
     <div className="machine">
@@ -37,4 +37,3 @@ export default function Wallet() {
     </div>
   );
 }
-//클래스에 맞게 값 지정
