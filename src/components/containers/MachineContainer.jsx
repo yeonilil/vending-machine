@@ -3,7 +3,7 @@ import useStore from "../../store/coin";
 
 const drinks = [
   {
-    name: "cocalcola",
+    name: "Cola",
     inventory: 3,
     price: 1300,
   },
@@ -47,13 +47,14 @@ export default function MachineContainer() {
   const { machineCoin } = useStore();
   return (
     <div className={styles.machineContainer}>
-      <div className={styles.drinkContainer}>
+      <div className={styles.drinksContainer}>
         {drinks.map((drink) => (
-          <div>
+          <div className={styles.drinkContainer}>
+            <div className={styles.drinkTop}></div>
             <div className={styles.drink}>
               <div className={styles.drinkName}>{drink.name}</div>
             </div>
-            <div className={styles.drinkPrice}>\ {drink.price}</div>
+            <button className={styles.drinkPrice}>{drink.price}</button>
           </div>
         ))}
       </div>

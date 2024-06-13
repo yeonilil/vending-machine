@@ -5,13 +5,15 @@ import "../src/styles/global.scss";
 
 function App() {
   return (
-    <div className="App">
-      <MachineContainer />
-      <div className="userContainer">
-        <Wallet />
-        <Inventory />
+    <>
+      <div className="App">
+        <MachineContainer />
+        <div className="userContainer">
+          <Wallet />
+          <Inventory />
+        </div>
       </div>
-    </div>
+    </>
   );
 }
 
