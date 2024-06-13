@@ -54,13 +54,20 @@ export default function MachineContainer() {
             <div className={styles.drink}>
               <div className={styles.drinkName}>{drink.name}</div>
             </div>
-            <button className={styles.drinkPrice}>{drink.price}</button>
+            <button
+              className={
+                drink.inventory >= 0 && drink.price <= machineCoin
+                  ? styles.drinkPrice
+                  : styles.unableDrink
+              }
+            >
+              {drink.price}
+            </button>
           </div>
         ))}
       </div>
 
       <div className={styles.machineCoin}>\ {machineCoin}</div>
-
       <button className={styles.selectButton}></button>
       <button className={styles.getButton}>Push</button>
     </div>
