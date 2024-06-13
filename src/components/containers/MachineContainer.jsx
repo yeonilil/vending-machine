@@ -5,49 +5,49 @@ const drinks = [
   {
     id: 0,
     name: "Cola",
-    inventory: 3,
+    inventory: 0,
     price: 1300,
   },
   {
     id: 1,
     name: "Dr pepper",
-    inventory: 3,
+    inventory: 0,
     price: 1200,
   },
   {
     id: 2,
     name: "Fanta",
-    inventory: 3,
+    inventory: 0,
     price: 1000,
   },
   {
     id: 3,
     name: "Lets Be",
-    inventory: 3,
+    inventory: 0,
     price: 700,
   },
   {
     id: 4,
     name: "Sprite",
-    inventory: 3,
+    inventory: 0,
     price: 800,
   },
   {
     id: 5,
     name: "Teiwa",
-    inventory: 3,
+    inventory: 0,
     price: 900,
   },
   {
     id: 6,
     name: "Water",
-    inventory: 3,
+    inventory: 0,
     price: 400,
   },
   {
     id: 7,
     name: "Welchs",
-    inventory: 3,
+    inventory: 0,
     price: 1600,
   },
 ];
@@ -72,7 +72,7 @@ export default function MachineContainer() {
       selectedDrink.price <= machineCoin
     ) {
       updateSelectDrink([...selectDrink, selectedDrink]);
-      drinks[selectedDrink.id].inventory -= 1; //재고
+      drinks[selectedDrink.id].inventory += 1; //재고
       buyDrink(selectedDrink.price); //자판기 남은 금액
     }
   };
