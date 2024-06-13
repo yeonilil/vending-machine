@@ -52,8 +52,16 @@ const drinks = [
   },
 ];
 export default function MachineContainer() {
-  const { walletCoin, machineCoin, selectDrink, buyDrink, updateSelectDrink } =
-    useStore();
+  const {
+    walletCoin,
+    machineCoin,
+    selectDrink,
+    buyDrink,
+    updateSelectDrink,
+    updateMachineCoin,
+    updateWalletCoin,
+    updateInventory,
+  } = useStore();
 
   const handleDrinkSelect = (id) => {
     //음료 선택
@@ -70,6 +78,12 @@ export default function MachineContainer() {
   };
   const handleChange = () => {
     //거스름돈
+    updateWalletCoin(machineCoin + walletCoin);
+    updateMachineCoin(0);
+  };
+
+  const handlePush = () => {
+    updateInventory(true);
   };
   return (
     <div className={styles.machineContainer}>
@@ -97,8 +111,10 @@ export default function MachineContainer() {
       </div>
 
       <div className={styles.machineCoin}>\ {machineCoin}</div>
-      <button className={styles.changeButton}></button>
-      <button className={styles.getButton}>Push</button>
+      <button className={styles.changeButton} onClick={handleChange}></button>
+      <button className={styles.getButton} onClick={handlePush}>
+        Push
+      </button>
     </div>
   );
 }
