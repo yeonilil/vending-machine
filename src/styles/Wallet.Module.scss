@@ -48,7 +48,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: 0 0 0 2px #ffe65a, 0 0 0 3px #ffa500, 0 0 0 5px;
+  box-shadow:
+    0 0 0 2px #ffe65a,
+    0 0 0 3px #ffa500,
+    0 0 0 5px;
   &:hover {
     background-color: #ffb400;
   }
