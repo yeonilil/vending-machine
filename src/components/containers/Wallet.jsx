@@ -7,7 +7,7 @@ export default function Wallet() {
   return (
     <div className="machine">
       <p className="walletTitle">My Wallet</p>
-      <div className="coinEnter">\ {walletCoin}</div>
+      <div className="coinEnter"> {walletCoin}</div>
       <div className="coinContainer">
         <div
           className={`coin ${walletCoin >= 50 ? "" : "disabled"}`}
