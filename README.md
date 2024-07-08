@@ -1,7 +1,7 @@
 
 ## 배포 링크
 
-https://vending-machine-cmf091s4u-kwakseoyeons-projects.vercel.app/
+https://vending-machine-zd7a.vercel.app/
 
 ## 요구사항
 -  지갑의 코인은 [50, 100, 500, 1000]단위로 사용할 수 있다.
